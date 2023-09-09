@@ -8,59 +8,69 @@
 */
 #include <stdio.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include <iostream>
 using namespace std;
 
-void calcAddition(void)
+void compAddition(double x_1, double i_1,
+double x_2, double i_2)
 {
-  cout <<"Addition" << endl;
-  int op1, op2;
-  cin >> op1;
-  cin >> op2;
-  int result;
-  cout << (op1 + op2) << endl;
+  cout << "Addition" << endl;
+  double result_real = (x_1 + x_2);
+  double result_imaginary = (i_1 + i_2);
+  char result_sign;
+  if(result_imaginary < 0)
+  {
+    result_sign = '-';
+  }
+  else
+  {
+    result_sign = '+';
+  }
+
+  cout << result_real;
+  cout << " " << result_sign << "j ";
+  cout << abs(result_imaginary);
+
   return;
 }
 
-void compCalc(void)
+
+
+void compInput(void)
 {
 
   int c = 0;
   cout << "Enter exp:";
+
   while ((c = getc(stdin)) != EOF) {
       if (c =='a' || c == 'A') 
       {
-        //c = 'A';
-        calcAddition();
-        //fputc(c, stdout);
+        cout << "Addition" << endl;
+        //compAddition();
       }
+
       
       if (c =='s' || c == 'S') 
       {
-        //c = 'S';
         cout << "Subtraction" << endl;
-        //fputc(c, stdout);
       }
 
       if (c =='m' || c == 'M') 
       {
-        //c = 'M';
         cout << "Multiplication" << endl;
-        //fputc(c, stdout);
       }
 
       if (c =='d' || c == 'D') 
       {
-        //c = 'M';
         cout << "Division" << endl;
-        //fputc(c, stdout);
       }
-
       if(c =='q' || c == 'Q')
       {
         cout << "Closing the calculator" << endl;
         return;
       }
+    }
        
-  }
+ 
 }
