@@ -12,6 +12,7 @@ using namespace std;
 
 int add(int x, int y);
 
+void compCalc(void);
 
 int main(){
     //cout << "Hello World, this is the main file" << endl;
@@ -21,6 +22,6 @@ int main(){
     cout << "Type Q to quit" << endl;
     //cout << "Enter exp:";
     std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
-
+    compCalc();
     return 0;
 }
