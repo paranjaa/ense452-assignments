@@ -20,8 +20,8 @@ int main(){
     cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
     cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cout << "Type Q to quit" << endl;
-    //cout << "Enter exp:";
-    std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
+
+    //std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
     compCalc();
     return 0;
 }
