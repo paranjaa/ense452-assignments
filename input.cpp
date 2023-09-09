@@ -20,7 +20,37 @@ void compCalc(void)
 {
    int c = 0;
     while ((c = getc(stdin)) != EOF) {
-        if (c=='a') c = 'A';
-        fputc(c, stdout);
+        if (c =='a' || c == 'A') 
+        {
+          //c = 'A';
+          cout <<"Addition" << endl;
+          //fputc(c, stdout);
+        }
+        if (c =='s' || c == 'S') 
+        {
+          //c = 'S';
+          cout << "Subtraction" << endl;
+          //fputc(c, stdout);
+        }
+
+        if (c =='m' || c== 'M') 
+        {
+          //c = 'M';
+          cout << "Multiplication" << endl;
+          //fputc(c, stdout);
+        }
+
+        if (c =='d' || c == 'D') 
+        {
+          //c = 'M';
+          cout << "Division" << endl;
+          //fputc(c, stdout);
+        }
+        if(c =='q' || c == 'Q')
+        {
+          cout << "Closing the calculator" << endl;
+          return;
+        }
+       
     }
 }
