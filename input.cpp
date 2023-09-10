@@ -12,8 +12,7 @@
 #include <iostream>
 using namespace std;
 
-void printResult(double result_real,
-double result_imaginary, char result_sign)
+void printResult(double result_real, double result_imaginary, char result_sign)
 {
     cout << result_real;
     cout << " " << result_sign << " j ";
@@ -33,8 +32,7 @@ char getSign(double result_imaginary)
 
 }
 
-void compAddition(double x_1, double i_1,
-double x_2, double i_2)
+void compAddition(double x_1, double i_1, double x_2, double i_2)
 {
     double result_real = (x_1 + x_2);
     double result_imaginary = (i_1 + i_2);
@@ -48,15 +46,21 @@ double x_2, double i_2)
 
 void compInput(void)
 {
-
-    int c = 0;
     cout << "Enter exp:";
-
+    int c = 0;
     while ((c = getc(stdin)) != EOF) 
     {
         if (c =='a' || c == 'A') 
         {
             cout << "Addition" << endl;
+            double value1, value2, value3, value4;
+            cin >> value1;
+            cin >> value2;
+            cin >> value3;
+            cin >> value4;
+
+            cout << "You put in " << value1 << value2 << value3 << value4 << endl;
+            
             //compAddition();
         }
         if (c =='s' || c == 'S') 
@@ -79,4 +83,5 @@ void compInput(void)
             return;
         }
     }
+
 }
