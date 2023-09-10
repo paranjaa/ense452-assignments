@@ -52,7 +52,14 @@ void compAddition(double x_1, double i_1, double x_2, double i_2)
 void compInput(void)
 {
     cout << "Enter exp:";
-    compAddition(1.0,2.0,3.0,4.0);
+    //max length as 20 for now
+    char buf[20];
+    // using fgets to take input from stdin
+    fgets(buf, 20, stdin);
+    printf("string %s\n", buf);
+    //compAddition(1.0,2.0,3.0,4.0);
+
+
     return;
 
     /*
