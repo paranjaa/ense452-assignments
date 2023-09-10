@@ -54,9 +54,22 @@ void compInput(void)
     cout << "Enter exp:";
     //max length as 20 for now
     char buf[20];
-    // using fgets to take input from stdin
+    // using fgets get the input from stdin
     fgets(buf, 20, stdin);
-    printf("string %s\n", buf);
+    //printf("string %s\n", buf);
+
+    char operation;
+    double x1;
+    double x2;
+    double x3;
+    double x4;
+
+    sscanf(buf, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
+    cout << operation << endl;
+    cout << x1 << endl;
+    cout << x2 << endl;
+    cout << x3 << endl;
+    cout << x4 << endl;
     //compAddition(1.0,2.0,3.0,4.0);
 
 
