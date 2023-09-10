@@ -10,6 +10,8 @@
 #include "input.cpp"
 using namespace std;
 
+
+
 void compAddition(double x_1, double i_1,
 double x_2, double i_2);
 
