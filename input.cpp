@@ -25,37 +25,13 @@ void printResult(double result_real, double result_imaginary, char result_sign)
 }
 
 
-char getSign(double result_imaginary)
-{
-    if(result_imaginary < 0)
-    {
-        return '-';
-    }
-    else
-    {
-        return '+';
-    }
-
-}
-
-void compAddition(double x_1, double i_1, double x_2, double i_2)
-{
-    double result_real = (x_1 + x_2);
-    double result_imaginary = (i_1 + i_2);
-    char result_sign = getSign(result_imaginary);
-    printResult(result_real, result_imaginary, result_sign);
-}
-
-
-
-
 void compInput(void)
 {
     cout << "Enter exp:";
     //max length as 20 for now
-    char buf[20];
+    char buf[40];
     // using fgets get the input from stdin
-    fgets(buf, 20, stdin);
+    fgets(buf, 40, stdin);
     //printf("string %s\n", buf);
 
     char operation;
