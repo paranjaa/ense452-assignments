@@ -8,6 +8,7 @@
 */
 
 #include "input.h"
+#include "complex.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -27,12 +28,9 @@ void printResult(double result_real, double result_imaginary, char result_sign)
 
 void compInput(void)
 {
-    cout << "Enter exp:";
     //max length as 20 for now
      
-    char buf[40];
-    // using fgets get the input from stdin
-    fgets(buf, 40, stdin);
+
     //printf("string %s\n", buf);
 
     char operation = '?';
@@ -41,40 +39,51 @@ void compInput(void)
     double x3;
     double x4;
 
-
-    sscanf(buf, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
-    cout << operation << endl;
-    cout << x1 << endl;
-    cout << x2 << endl;
-    cout << x3 << endl;
-    cout << x4 << endl;
-
-    if(operation == 'a' || operation == 'A' )
+    while(operation != 'q' || operation != 'Q')
     {
-        cout << "Addition" << endl;
+        cout << "Enter exp:";
+        char buf[40];
+        // using fgets get the input from stdin
+        fgets(buf, 40, stdin);
+
+        sscanf(buf, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
+        if(operation == 'a' || operation == 'A' )
+        {
+            cout << endl << "Addition" << endl;
+        }
+
+        if(operation == 's' || operation == 'S' )
+        {
+            cout << endl << "Substraction" << endl;
+        }
+
+        if(operation == 'm' || operation == 'M' )
+        {
+            cout << endl << "Multipliction" << endl;
+        }
+
+        if(operation == 'd' || operation == 'D' )
+        {
+            cout << endl << "Division" << endl;
+        }
+
+        if(operation == 'q' || operation == 'Q' )
+        {
+            cout << endl << "Closing the calculator";
+            return;
+        }
+
     }
 
-    if(operation == 's' || operation == 'S' )
-    {
-        cout << "Substraction" << endl;
-    }
 
-    if(operation == 'm' || operation == 'M' )
-    {
-        cout << "Multipliction" << endl;
-    }
+ 
+    // cout << operation << endl;
+    // cout << x1 << endl;
+    // cout << x2 << endl;
+    // cout << x3 << endl;
+    // cout << x4 << endl;
 
-    if(operation == 'd' || operation == 'D' )
-    {
-        cout << "Division" << endl;
-    }
 
-    if(operation == 'q' || operation == 'Q' )
-    {
-        cout << "Quitting the program";
-        return;
-    }
-    //compAddition(1.0,2.0,3.0,4.0);
 
     /*
     int c = 0;

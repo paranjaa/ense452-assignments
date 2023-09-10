@@ -8,8 +8,14 @@
 
 #include <iostream>
 #include "input.cpp"
+#include "complex.h"
 using namespace std;
 
+class MyClass {       // The class
+  public:             // Access specifier
+    int myNum;        // Attribute (int variable)
+    string myString;  // Attribute (string variable)
+};
 
 int main(){
     //cout << "Hello World, this is the main file" << endl;
@@ -17,7 +23,9 @@ int main(){
     cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
     cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cout << "Type Q to quit" << endl;
-    compInput();
+    //compInput();
+
+    //Complex comp1 = new Complex();
 
     //std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
     //compAddition(45.67, -170, 9.2, 15);
