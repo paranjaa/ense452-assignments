@@ -12,12 +12,15 @@
 #include <iostream>
 using namespace std;
 
+
+
 void printResult(double result_real, double result_imaginary, char result_sign)
 {
     cout << result_real;
     cout << " " << result_sign << " j ";
     cout << abs(result_imaginary);
 }
+
 
 char getSign(double result_imaginary)
 {
@@ -47,6 +50,9 @@ void compAddition(double x_1, double i_1, double x_2, double i_2)
 void compInput(void)
 {
     cout << "Enter exp:";
+
+
+    /*
     int c = 0;
     while ((c = getc(stdin)) != EOF) 
     {
@@ -57,10 +63,7 @@ void compInput(void)
             cin >> value1;
             cin >> value2;
             cin >> value3;
-            cin >> value4;
-
-            cout << "You put in " << value1 << value2 << value3 << value4 << endl;
-            
+            cin >> value4;            
             //compAddition();
         }
         if (c =='s' || c == 'S') 
@@ -83,5 +86,5 @@ void compInput(void)
             return;
         }
     }
-
+    */
 }
