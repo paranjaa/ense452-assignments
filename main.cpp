@@ -15,6 +15,16 @@ class MyClass {       // The class
   public:             // Access specifier
     int myNum;        // Attribute (int variable)
     string myString;  // Attribute (string variable)
+    MyClass()
+    {
+      myNum = 3;
+      myString = "string1";
+    }
+    void printNum()
+    {
+      cout << "asodaisusa" << endl;
+    }
+
 };
 
 int main(){
@@ -24,6 +34,11 @@ int main(){
     cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cout << "Type Q to quit" << endl;
     //compInput();
+
+    MyClass class1;
+    class1.printNum();
+
+    
 
     //Complex comp1 = new Complex();
 
