@@ -42,11 +42,11 @@ void compInput(void)
     while(operation != 'q' || operation != 'Q')
     {
         cout << "Enter exp:";
-        char buf[40];
+        char input[40];
         // using fgets get the input from stdin
-        fgets(buf, 40, stdin);
+        fgets(input, 40, stdin);
 
-        sscanf(buf, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
+        sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
         if(operation == 'a' || operation == 'A' )
         {
             cout << endl << "Addition" << endl;

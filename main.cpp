@@ -20,9 +20,16 @@ class MyClass {       // The class
       myNum = 3;
       myString = "string1";
     }
+    MyClass(int newNum, string newString)
+    {
+      myNum = newNum;
+      myString = newString;
+    }
     void printNum()
     {
       cout << "asodaisusa" << endl;
+      cout << myNum;
+      cout << myString;
     }
 
 };
@@ -35,8 +42,8 @@ int main(){
     cout << "Type Q to quit" << endl;
     //compInput();
 
-    MyClass class1;
-    class1.printNum();
+    //MyClass class1(3, "string4");
+    //class1.printNum();
 
     
 
