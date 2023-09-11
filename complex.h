@@ -14,11 +14,8 @@ class Complex{
     Complex();
     Complex(double newReal, double newImaginary);
     void printValues();
-        //void createValues(double newReal, double newImaginary);
-        //void calculate();
-        //char getSign(double result_imaginary);
-
-       // void compAddition(double x_1, double i_1, double x_2, double i_2);
+    char getSign(double result_imaginary);
+    //void compAddition(double x_1, double i_1, double x_2, double i_2);
 };
 
 

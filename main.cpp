@@ -41,22 +41,6 @@ int main(){
     cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
     cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cout << "Type Q to quit" << endl;
-    //compInput();
-
-
-    //MyClass class1(3, "string4");
-    //class1.printNum();
-
-    
-
-    Complex comp1;
-    comp1.printValues();
-    cout << endl;
-    Complex comp2(1.2, 3.4);
-    comp2.printValues();
-
-
-    //std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
-    //compAddition(45.67, -170, 9.2, 15);
+    compInput();
     return 0;
 }

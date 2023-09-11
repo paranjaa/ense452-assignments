@@ -35,9 +35,9 @@ void compInput(void)
 
     char operation = '?';
     double x1;
+    double i1;
     double x2;
-    double x3;
-    double x4;
+    double i2;
 
     while(operation != 'q' || operation != 'Q')
     {
@@ -46,10 +46,14 @@ void compInput(void)
         // using fgets get the input from stdin
         fgets(input, 40, stdin);
 
-        sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &x2, &x3, &x4);
+        sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &i1, &x2, &i2);
         if(operation == 'a' || operation == 'A' )
         {
             cout << endl << "Addition" << endl;
+            Complex comp1(x1, i1);
+            Complex comp2(x2, i2);
+            comp1.printValues();
+            comp2.printValues();
         }
 
         if(operation == 's' || operation == 'S' )
