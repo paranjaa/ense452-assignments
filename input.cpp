@@ -9,6 +9,7 @@
 
 #include "input.h"
 #include "complex.h"
+#include "calc.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -49,11 +50,10 @@ void compInput(void)
         sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &i1, &x2, &i2);
         if(operation == 'a' || operation == 'A' )
         {
-            cout << endl << "Addition" << endl;
+            // cout << endl << "Addition" << endl;
             Complex comp1(x1, i1);
             Complex comp2(x2, i2);
-            comp1.printValues();
-            comp2.printValues();
+            calcAdd(comp1, comp2);
         }
 
         if(operation == 's' || operation == 'S' )
