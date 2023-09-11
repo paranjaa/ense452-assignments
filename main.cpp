@@ -7,10 +7,11 @@
 */
 
 #include <iostream>
-#include "input.cpp"
+#include "input.h"
 #include "complex.h"
 using namespace std;
 
+/*
 class MyClass {       // The class
   public:             // Access specifier
     int myNum;        // Attribute (int variable)
@@ -32,7 +33,7 @@ class MyClass {       // The class
       cout << myString;
     }
 
-};
+};*/
 
 int main(){
     //cout << "Hello World, this is the main file" << endl;
@@ -42,12 +43,18 @@ int main(){
     cout << "Type Q to quit" << endl;
     //compInput();
 
+
     //MyClass class1(3, "string4");
     //class1.printNum();
 
     
 
-    //Complex comp1 = new Complex();
+    Complex comp1;
+    comp1.printValues();
+    cout << endl;
+    Complex comp2(1.2, 3.4);
+    comp2.printValues();
+
 
     //std::cout << "The sum of 3 and 4 is: " << add(3, 4) << '\n';
     //compAddition(45.67, -170, 9.2, 15);

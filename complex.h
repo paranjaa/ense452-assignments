@@ -12,7 +12,8 @@ class Complex{
     double real;
     double imaginary;
     Complex();
-    //void printValues();
+    Complex(double newReal, double newImaginary);
+    void printValues();
         //void createValues(double newReal, double newImaginary);
         //void calculate();
         //char getSign(double result_imaginary);

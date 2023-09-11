@@ -6,13 +6,21 @@
 #include <iostream>
 using namespace std;
 
-class Complex{
-    double real;
-    double imaginary;
-    Complex()
+
+    Complex::Complex()
     {
-        real = 1.0;
-        imaginary = 2.0;
+        real = 4.2;
+        imaginary = 2.4;
+    }
+    Complex::Complex(double newReal, double newImaginary)
+    {
+        real = newReal;
+        imaginary = newImaginary;
+    }
+    void Complex::printValues()
+    {
+        cout << real << endl;
+        cout << imaginary << endl;
     }
     /*
     void createValues(double newReal, double newImaginary)
@@ -47,7 +55,3 @@ class Complex{
         printResult(result_real, result_imaginary, result_sign);
     }*/
 
-
-
-
-};
