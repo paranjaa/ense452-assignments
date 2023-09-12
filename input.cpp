@@ -19,12 +19,7 @@ using namespace std;
 
 
 
-void printResult(double result_real, double result_imaginary, char result_sign)
-{
-    cout << result_real;
-    cout << " " << result_sign << " j ";
-    cout << abs(result_imaginary);
-}
+
 
 
 void compInput(void)
@@ -54,6 +49,7 @@ void compInput(void)
             Complex comp1(x1, i1);
             Complex comp2(x2, i2);
             calcAdd(comp1, comp2);
+
         }
 
         if(operation == 's' || operation == 'S' )
@@ -81,47 +77,4 @@ void compInput(void)
 
 
  
-    // cout << operation << endl;
-    // cout << x1 << endl;
-    // cout << x2 << endl;
-    // cout << x3 << endl;
-    // cout << x4 << endl;
-
-
-
-    /*
-    int c = 0;
-    while ((c = getc(stdin)) != EOF) 
-    {
-        if (c =='a' || c == 'A') 
-        {
-            cout << "Addition" << endl;
-            double value1, value2, value3, value4;
-            cin >> value1;
-            cin >> value2;
-            cin >> value3;
-            cin >> value4;            
-            //compAddition();
-        }
-        if (c =='s' || c == 'S') 
-        {
-            cout << "Subtraction" << endl;
-        }
-
-        if (c =='m' || c == 'M') 
-        {
-            cout << "Multiplication" << endl;
-        }
-
-        if (c =='d' || c == 'D') 
-        {
-            cout << "Division" << endl;
-        }
-        if(c =='q' || c == 'Q')
-        {
-            cout << "Closing the calculator" << endl;
-            return;
-        }
-    }
-    */
 }

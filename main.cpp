@@ -11,29 +11,6 @@
 #include "complex.h"
 using namespace std;
 
-/*
-class MyClass {       // The class
-  public:             // Access specifier
-    int myNum;        // Attribute (int variable)
-    string myString;  // Attribute (string variable)
-    MyClass()
-    {
-      myNum = 3;
-      myString = "string1";
-    }
-    MyClass(int newNum, string newString)
-    {
-      myNum = newNum;
-      myString = newString;
-    }
-    void printNum()
-    {
-      cout << "asodaisusa" << endl;
-      cout << myNum;
-      cout << myString;
-    }
-
-};*/
 
 int main(){
     //cout << "Hello World, this is the main file" << endl;
