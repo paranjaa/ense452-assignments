@@ -43,6 +43,15 @@ void compInput(void)
         fgets(input, 40, stdin);
 
         sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &i1, &x2, &i2);
+
+        //check for any 
+        if(operation != 'a' || operation != 's' || operation != 'm' || 
+        operation != 'd'  || operation != 'q' || operation != 'A' ||
+         operation != 'S' || operation != 'M' || operation != 'D' ||
+        operation != 'Q')
+        {
+            cout << "error code 1: illegal command" << endl; 
+        }
         if(operation == 'a' || operation == 'A' )
         {
             // cout << endl << "Addition" << endl;
@@ -68,6 +77,11 @@ void compInput(void)
 
         if(operation == 'd' || operation == 'D' )
         {
+            //check for div by zero
+            if(x2 == 0 && i2 == 0)
+            {
+                cout << "error code: 4: divide by zero" << endl;
+            }
             cout << endl << "Division" << endl;
         }
 
