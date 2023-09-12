@@ -57,5 +57,19 @@ void calcMultiply(Complex operand1, Complex operand2)
     printResult(result_real, result_imaginary, result_sign);
 }
 
+void calcDivide(Complex operand1, Complex operand2)
+{
+    //need the conjugate
+    Complex conjugate(operand2.real,
+     (-1*(operand2.imaginary)) );
+
+    double result_real = 1.1;
+    double result_imaginary = 2.2;
+    char result_sign = getSign(result_imaginary);
+    
+    printResult(result_real, result_imaginary, result_sign);
+
+}
+
 
 

@@ -21,5 +21,6 @@ void calcSubtract(Complex operand1, Complex operand2);
 
 void calcMultiply(Complex operand1, Complex operand2);
 
+void calcDivide(Complex operand1, Complex operand2);
 
 #endif
