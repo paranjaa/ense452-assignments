@@ -53,7 +53,10 @@ void compInput(void)
 
         if(operation == 's' || operation == 'S' )
         {
-            cout << endl << "Substraction" << endl;
+            Complex comp1(x1, i1);
+            Complex comp2(x2, i2);
+            calcSubtract(comp1, comp2);
+
         }
 
         if(operation == 'm' || operation == 'M' )

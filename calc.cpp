@@ -36,5 +36,13 @@ void calcAdd(Complex operand1, Complex operand2)
     double result_imaginary = (operand1.imaginary + operand2.imaginary);
     char result_sign = getSign(result_imaginary);
     printResult(result_real, result_imaginary, result_sign);
-    
 }
+
+void calcSubtract(Complex operand1, Complex operand2)
+{
+    double result_real = (operand1.real - operand2.real);
+    double result_imaginary = (operand1.imaginary - operand2.imaginary);
+    char result_sign = getSign(result_imaginary);
+    printResult(result_real, result_imaginary, result_sign);
+}
+
