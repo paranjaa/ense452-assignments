@@ -19,4 +19,7 @@ void calcAdd(Complex operand1, Complex operand2);
 
 void calcSubtract(Complex operand1, Complex operand2);
 
+void calcMultiply(Complex operand1, Complex operand2);
+
+
 #endif

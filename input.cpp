@@ -61,7 +61,9 @@ void compInput(void)
 
         if(operation == 'm' || operation == 'M' )
         {
-            cout << endl << "Multipliction" << endl;
+            Complex comp1(x1, i1);
+            Complex comp2(x2, i2);
+            calcMultiply(comp1, comp2);
         }
 
         if(operation == 'd' || operation == 'D' )
@@ -74,6 +76,7 @@ void compInput(void)
             cout << endl << "Closing the calculator";
             return;
         }
+        
 
     }
 

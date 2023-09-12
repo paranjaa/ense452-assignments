@@ -46,3 +46,16 @@ void calcSubtract(Complex operand1, Complex operand2)
     printResult(result_real, result_imaginary, result_sign);
 }
 
+void calcMultiply(Complex operand1, Complex operand2)
+{
+
+    double result_real = (operand1.real * operand2.real) - 
+    (operand1.imaginary * operand2.imaginary);
+    double result_imaginary = (operand1.real * operand2.imaginary)
+     + (operand1.imaginary * operand2.real);
+    char result_sign = getSign(result_imaginary);
+    printResult(result_real, result_imaginary, result_sign);
+}
+
+
+
