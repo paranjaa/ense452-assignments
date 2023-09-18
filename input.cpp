@@ -10,9 +10,9 @@
 #include "input.h"
 //#include "complex.h"
 //#include "calc.h"
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
+//#include <stdio.h>
+//#include <ctype.h>
+//#include <stdlib.h>
 #include <iostream>
 
 using namespace std;

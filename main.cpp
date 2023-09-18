@@ -13,12 +13,13 @@ using namespace std;
 
 
 int main(){
-    //cout << "Hello World, this is the main file" << endl;
-    cout << "Complex calculator" << endl;
-    cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
-    cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
-    cout << "Type Q to quit" << endl;
-    cout << countWords() << endl;
-    //compInput();
+
+    // cout << "Complex calculator" << endl;
+    // cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
+    // cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
+    // cout << "Type Q to quit" << endl;
+    cout << "Hello World" << endl;
+    cout << countWords("test sentence") << endl;
+    //cout << countWords() << endl;
     return 0;
 }
