@@ -18,10 +18,20 @@
 using namespace std;
 
 
-
+//based on code from https://stackoverflow.com/questions/24841066/counting-words-in-a-string
 int countWords(string input)
 {
-    return 1;
+    int count = 0;
+    char previous = ' ';
+    for(int i = 0; i < input.size(); i++)
+    {
+        if(input[i] != ' ' && previous == ' ')
+        {
+            count++;
+        }
+        previous = input[i];
+    }
+    return count;
 }
 
 /*

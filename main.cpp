@@ -19,7 +19,17 @@ int main(){
     // cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     // cout << "Type Q to quit" << endl;
     cout << "Hello World" << endl;
-    cout << countWords("test sentence") << endl;
-    //cout << countWords() << endl;
+    string input = "a 1 2 3 1 213221 321";
+    int result = countWords(input);
+    cout << "There are " << result;
+    cout << " words in the test sentence" << endl;
+    if(result < 5)
+    {
+      cout << "error: too few arguements" << endl;
+    }
+    if(result > 5)
+    {
+      cout << "error: too many arguements" << endl;
+    }
     return 0;
 }
