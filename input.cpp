@@ -8,8 +8,8 @@
 */
 
 #include "input.h"
-#include "complex.h"
-#include "calc.h"
+//#include "complex.h"
+//#include "calc.h"
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
@@ -19,9 +19,12 @@ using namespace std;
 
 
 
+int countWords(string input)
+{
+    return 1;
+}
 
-
-
+/*
 void compInput(void)
 {
     //max length as 20 for now
@@ -43,8 +46,15 @@ void compInput(void)
         fgets(input, 40, stdin);
 
         sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &i1, &x2, &i2);
+        
+        cout << operation << endl;
+        cout << x1 << endl;
+        cout << i1 << endl;
+        cout << x2 << endl;
+        cout << i2 << endl;
 
-        //check for any 
+        //check for any non operators
+        /*
         if(operation != 'a' || operation != 's' || operation != 'm' || 
         operation != 'd'  || operation != 'q' || operation != 'A' ||
          operation != 'S' || operation != 'M' || operation != 'D' ||
@@ -84,6 +94,7 @@ void compInput(void)
             }
             cout << endl << "Division" << endl;
         }
+        
 
         if(operation == 'q' || operation == 'Q' )
         {
@@ -96,4 +107,4 @@ void compInput(void)
 
 
  
-}
+}*/

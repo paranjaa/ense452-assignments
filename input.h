@@ -10,7 +10,7 @@ using namespace std;
 
 //void printResult(double result_real, double result_imaginary, char result_sign);
 
-
-void compInput(void);
+int countWords(void);
+//void compInput(void);
 
 #endif

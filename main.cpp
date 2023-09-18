@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include "input.h"
-#include "complex.h"
+//#include "complex.h"
 using namespace std;
 
 
@@ -18,6 +18,7 @@ int main(){
     cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
     cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cout << "Type Q to quit" << endl;
-    compInput();
+    cout << countWords() << endl;
+    //compInput();
     return 0;
 }
