@@ -36,24 +36,16 @@ int main(){
 
     cout << "Hello World" << endl;
 
-    double x1 = 1.1;
-    double i1 = 2.0;
+    double x1 = 1;
+    double y1 = 2;
 
-   
+    double x2 = 3;
+    double y2 = 4;
 
-    double m1 = (sqrt(x1*x1 + i1 * i1));
-    double a1 = 0;
+    
+    double x3 = ((x1*x2 + y1*y2) / ((x2*x2) + (y2*y2)));
+    double y3 = ((y1*x2 - y2*x1)/((x2*x2) + (y2*y2)));
 
-
-    double x2 = 3.0;
-    double i2 = 4.0;
-
-    double m2 = (sqrt(x2*x2 + i2 * i2));
-    double a2;
-
-    double x3 = 0.0;
-    double i3 = 0.0;
-
-    cout << "The answer is: " << x3 << " j " << i3 << endl;
+    cout << "The answer is: " << x3 << " j " << y3 << endl;
    
 }
