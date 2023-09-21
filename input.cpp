@@ -34,7 +34,7 @@ int countWords(string input)
     return count;
 }
 
-/*
+
 void compInput(void)
 {
     //max length as 20 for now
@@ -42,7 +42,7 @@ void compInput(void)
 
     //printf("string %s\n", buf);
 
-    char operation = '?';
+    char operation;
     double x1;
     double i1;
     double x2;
@@ -110,11 +110,11 @@ void compInput(void)
         {
             cout << endl << "Closing the calculator";
             return;
-        }
+        }*/
         
 
     }
 
 
  
-}*/
+}

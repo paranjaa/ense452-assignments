@@ -14,12 +14,17 @@ using namespace std;
 
 
 int main(){
+    //cout << "Complex calculator" << endl;
+    //cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
+    //cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
+    //cout << "Type Q to quit" << endl;
+    cout << "Hello World" << endl;
 
-    // cout << "Complex calculator" << endl;
-    // cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
-    // cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
-    
-    // cout << "Type Q to quit" << endl;
+    return 0;
+   
+}
+
+
     // string input = "a 1 2 3 1 213221 321";
     // int result = countWords(input);
     // cout << "There are " << result;
@@ -34,18 +39,16 @@ int main(){
     // }
     // return 0;
 
-    cout << "Hello World" << endl;
+    
 
-    double x1 = 1;
-    double y1 = 2;
+    // double x1 = 1;
+    // double y1 = 2;
 
-    double x2 = 3;
-    double y2 = 4;
+    // double x2 = 3;
+    // double y2 = 4;
 
     
-    double x3 = ((x1*x2 + y1*y2) / ((x2*x2) + (y2*y2)));
-    double y3 = ((y1*x2 - y2*x1)/((x2*x2) + (y2*y2)));
+    // double x3 = ((x1*x2 + y1*y2) / ((x2*x2) + (y2*y2)));
+    // double y3 = ((y1*x2 - y2*x1) /((x2*x2) + (y2*y2)));
 
-    cout << "The answer is: " << x3 << " j " << y3 << endl;
-   
-}
+    // cout << "The answer is: " << x3 << " j " << y3 << endl;
