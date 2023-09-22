@@ -19,6 +19,7 @@ using namespace std;
 
 
 //based on code from https://stackoverflow.com/questions/24841066/counting-words-in-a-string
+/*
 int countWords(string input)
 {
     int count = 0;
@@ -32,36 +33,47 @@ int countWords(string input)
         previous = input[i];
     }
     return count;
-}
+}*/
 
 
 void compInput(void)
 {
-    //max length as 20 for now
-     
-
-    //printf("string %s\n", buf);
-
     char operation;
-    double x1;
-    double i1;
-    double x2;
-    double i2;
+    double re1;
+    double im1;
+    double re2;
+    double im2;
 
-    while(operation != 'q' || operation != 'Q')
+    int size = 40;
+    char input[size];
+
+    while(1)
     {
-        cout << "Enter exp:";
-        char input[40];
-        // using fgets get the input from stdin
-        fgets(input, 40, stdin);
+        cerr << "Enter exp:";
+        input[0] = '\0';
+        fgets(input, size, stdin);
 
-        sscanf(input, "%c %lf %lf %lf %lf", &operation, &x1, &i1, &x2, &i2);
+        sscanf(input, "%c %lf %lf %lf %lf", &operation, &re1, &im1, &re2, &im2);
+
+        //cerr << operation << endl;
+        //cerr << re1 << endl;
+        //cerr << im1 << endl;
+        //cerr << re2 << endl;
+        //cerr << im2 << endl;
+
+        if(operation == 'q' || operation == 'Q')
+        {
+            cerr << "Closing the calculator" << endl;
+            break;
+        }
+
+        /*
         
         cout << operation << endl;
         cout << x1 << endl;
         cout << i1 << endl;
         cout << x2 << endl;
-        cout << i2 << endl;
+        cout << i2 << endl;*/
 
         //check for any non operators
         /*
