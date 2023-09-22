@@ -130,14 +130,10 @@ void comp_input(void)
                 {
                         input_string = input_string + input[i];
                 }
-                //in case the input is empty (from just hitting enter)
-                //go through loop again without saying it's an error
-                if(input_string[0] == '\0')
-                {
-                        cerr << "Made it in here";
-                        continue;
-                }
 
+                //also using stringstream to read in the variables
+                //did try with sscanf, but it kept breaking after 
+                //there were sets of spaces
                 stringstream stream1(input_string);
                 stream1 >> operation;
                 stream1 >> re1;
@@ -145,9 +141,9 @@ void comp_input(void)
                 stream1 >> re2;
                 stream1 >> im2;
        
-    
-        
 
+                //if they enter the exit command, leave the loop
+                //for every other condition, keep it running
                 if(operation == 'q' || operation == 'Q')
                 {
                         cerr << "Closing the calculator";
@@ -164,10 +160,9 @@ void comp_input(void)
                         continue;
                 }
         
-
-
-
-        
+                //check if the operation is on the list of the
+                // recognized letters for operations
+                //if not, then reset the loop
                 if(operation != 'a' && operation != 's' && operation != 'm' && 
                 operation != 'd'  && operation != 'q' && operation != 'A' &&
                 operation != 'S' && operation != 'M' && operation != 'D' &&
@@ -178,39 +173,32 @@ void comp_input(void)
                         continue;
                 }
 
+                //
+                Complex comp1(re1, im1);
+                Complex comp2(re2, im2);
+
                 if(operation == 'a' || operation == 'A' )
                 {
-                        Complex comp1(re1, im1);
-                        Complex comp2(re2, im2);
                         calc_add(comp1, comp2);
-                        cerr << endl;
                         continue;
                 }
 
                 if(operation == 's' || operation == 'S' )
                 {
-                        Complex comp1(re1, im1);
-                        Complex comp2(re2, im2);
                         calc_subtract(comp1, comp2);
-                        cerr << endl;
                         continue;
                 }
 
                 if(operation == 'm' || operation == 'M' )
                 {
-                        Complex comp1(re1, im1);
-                        Complex comp2(re2, im2);
                         calc_multiply(comp1, comp2);
-                        cerr << endl;
                         continue;
                 }
 
                 if(operation == 'd' || operation == 'D' )
                 {
-                        Complex comp1(re1, im1);
-                        Complex comp2(re2, im2);
+;
                         calc_divide(comp1, comp2);
-                        cerr << endl;
                         continue;
                 }
 
