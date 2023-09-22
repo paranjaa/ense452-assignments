@@ -16,7 +16,6 @@ void printResult(double result_real, double result_imaginary, char result_symbol
 
 void calcAdd(Complex operand1, Complex operand2);
 
-
 void calcSubtract(Complex operand1, Complex operand2);
 
 void calcMultiply(Complex operand1, Complex operand2);

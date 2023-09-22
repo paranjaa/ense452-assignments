@@ -8,8 +8,8 @@
 */
 
 #include "input.h"
-//#include "complex.h"
-//#include "calc.h"
+#include "complex.h"
+#include "calc.h"
 //#include <stdio.h>
 //#include <ctype.h>
 //#include <stdlib.h>
@@ -63,11 +63,11 @@ void compInput(void)
                 break;
             }
         }
-        cerr << operation << endl;
-        cerr << re1 << endl;
-        cerr << im1 << endl;
-        cerr << re2 << endl;
-        cerr << im2 << endl;
+        // cerr << operation << endl;
+        // cerr << re1 << endl;
+        // cerr << im1 << endl;
+        // cerr << re2 << endl;
+        // cerr << im2 << endl;
 
 
         if(operation == 'q' || operation == 'Q')
@@ -79,68 +79,56 @@ void compInput(void)
         
         if(countWords(input) < 5)
         {
-            cout << "error code: 2: missing arguments"; // <<endl 
+            cout << "error code: 2: missing arguments"; 
+            cerr << endl; 
             continue;
         }
 
         if(countWords(input) > 5)
         {
-            cout << "error code: 3: extra arguments";  // <<endl 
+            cout << "error code: 3: extra arguments";  
+            cerr << endl; 
             continue;
         }
 
         if( (re2 == 0 && im2 == 0) && (operation == 'D' || operation == 'd') )
         {
             cout << "error code: 4: divide by zero";
+            cerr << endl;
             continue;
         }
 
+        
         if(operation != 'a' && operation != 's' && operation != 'm' && 
         operation != 'd'  && operation != 'q' && operation != 'A' &&
          operation != 'S' && operation != 'M' && operation != 'D' &&
         operation != 'Q')
         {
-            cout << "error code: 1: illegal command";// << endl; 
+            cout << "error code: 1: illegal command";
+            cerr << endl; 
             continue;
         }
 
-
-
-        //int a = countWords(input);
-        //cerr << "There are " << a << " words in the input" << endl;
-
-        /*
-        
-        cout << operation << endl;
-        cout << x1 << endl;
-        cout << i1 << endl;
-        cout << x2 << endl;
-        cout << i2 << endl;*/
-
-        //check for any non operators
-        /*
-        if(operation != 'a' || operation != 's' || operation != 'm' || 
-        operation != 'd'  || operation != 'q' || operation != 'A' ||
-         operation != 'S' || operation != 'M' || operation != 'D' ||
-        operation != 'Q')
-        {
-            cout << "error code 1: illegal command" << endl; 
-        }
         if(operation == 'a' || operation == 'A' )
         {
             // cout << endl << "Addition" << endl;
-            Complex comp1(x1, i1);
-            Complex comp2(x2, i2);
+            Complex comp1(re1, im1);
+            Complex comp2(re2, im2);
             calcAdd(comp1, comp2);
+            cout << endl;
+            continue;
         }
 
-        if(operation == 's' || operation == 'S' )
-        {
-            Complex comp1(x1, i1);
-            Complex comp2(x2, i2);
-            calcSubtract(comp1, comp2);
+        
 
-        }
+
+
+
+        /*
+  
+        
+
+        
 
         if(operation == 'm' || operation == 'M' )
         {

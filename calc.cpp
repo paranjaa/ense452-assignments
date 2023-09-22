@@ -24,10 +24,9 @@ char getSign(double result_imaginary)
 
 void printResult(double result_real, double result_imaginary, char result_sign)
 {
-    cout << endl;
     cout << result_real;
     cout << " " << result_sign << " j ";
-    cout << abs(result_imaginary) << endl;
+    cout << abs(result_imaginary);
 }
 
 void calcAdd(Complex operand1, Complex operand2)
