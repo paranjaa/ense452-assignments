@@ -5,6 +5,7 @@
 using namespace std;
 
 int count_words(string input);
+bool compare_double_0(double a);
 void comp_input(void);
 
 #endif

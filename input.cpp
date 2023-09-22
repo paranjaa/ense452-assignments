@@ -24,8 +24,24 @@ int count_words(string input)
     int count = 0;
     string word;
     while(strm >> word)
+    {
         ++count;
+    }
     return count;
+}
+
+//based on code from 
+//https://stackoverflow.com/questions/4010240/comparing-doubles
+bool compare_double_0(double a)
+{
+        if ( std::abs(a - 0) < 0.0000001 )
+        {
+                return true;
+        }
+        else
+        {
+                return false;
+        }
 }
 
 
@@ -87,8 +103,8 @@ void comp_input(void)
             continue;
         }
 
-        
-        if( (re2 == 0 && im2 == 0) && (operation == 'D' || operation == 'd') )
+        if( ( compare_double_0(re2) &&  compare_double_0(im2)) 
+        && (operation == 'D' || operation == 'd') )
         {
             cout << "error code: 4: divide by zero";
             cerr << endl;
