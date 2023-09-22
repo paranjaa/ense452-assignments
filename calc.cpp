@@ -41,7 +41,6 @@ void calc_add(Complex op1, Complex op2)
         double result_re = (op1.re + op2.re);
         double result_im = (op1.im + op2.im);
         
-   
         print_result(result_re, result_im);
 }
 
@@ -50,7 +49,6 @@ void calc_subtract(Complex op1, Complex op2)
         double result_re = (op1.re - op2.re);
         double result_im = (op1.im - op2.im);
 
-        char result_sign = get_sign(result_im);
         print_result(result_re, result_im);
 }
 
@@ -63,7 +61,6 @@ void calc_multiply(Complex op1, Complex op2)
         double result_im = (op1.re * op2.im)
         + (op1.im * op2.re);
 
-        char result_sign = get_sign(result_im);
         print_result(result_re, result_im);
 }
 
@@ -79,8 +76,6 @@ void calc_divide(Complex op1, Complex op2)
         double result_im = ( ( (op1.im*op2.re) - (op2.im*op1.re) ) /
         ( (op2.re * op2.re) + (op2.im * op2.im) ));
 
-
-        char result_sign = get_sign(result_im);
         
         print_result(result_re, result_im);
 }
