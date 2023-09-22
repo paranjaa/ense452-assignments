@@ -63,11 +63,13 @@ void compInput(void)
                 break;
             }
         }
-        // cerr << operation << endl;
-        // cerr << re1 << endl;
-        // cerr << im1 << endl;
-        // cerr << re2 << endl;
-        // cerr << im2 << endl;
+
+        
+        cerr << operation << endl;
+        cerr << re1 << endl;
+        cerr << im1 << endl;
+        cerr << re2 << endl;
+        cerr << im2 << endl;
 
 
         if(operation == 'q' || operation == 'Q')
@@ -144,29 +146,6 @@ void compInput(void)
             cerr << endl;
             continue;
         }
-        
-
-
-        
-
-
-
-
-        /*
-  
-        
-
-        
-
-      
-        
-
-        if(operation == 'q' || operation == 'Q' )
-        {
-            cout << endl << "Closing the calculator";
-            return;
-        }*/
-        
 
     }
 

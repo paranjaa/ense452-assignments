@@ -1,12 +1,6 @@
 #ifndef COMPLEX_H
 #define COMPLEX_H
 
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <iostream>
-using namespace std;
-
 class Complex{
     public:
     double re;
