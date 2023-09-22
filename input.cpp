@@ -3,16 +3,12 @@
   Course: ENSE 452
   Date: Sept 8th, 2023
   Programmer: Alok Paranjape
-  Description: Making a complex-calculator with a command line
-  this file is for taking user input
+  Description: 
 */
 
 #include "input.h"
 #include "complex.h"
 #include "calc.h"
-//#include <stdio.h>
-//#include <ctype.h>
-//#include <stdlib.h>
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -56,6 +52,13 @@ void compInput(void)
         {
             input_string = input_string + input[i];
         }
+
+        stringstream stream1(input_string);
+        stream1 >> operation;
+        stream1 >> re1;
+        stream1 >> im1;
+        stream1 >> re2;
+        stream1 >> im2;
        
 
         if(operation == 'q' || operation == 'Q')
@@ -96,13 +99,6 @@ void compInput(void)
             cerr << endl; 
             continue;
         }
-
-        stringstream stream1(input_string);
-        stream1 >> operation;
-        stream1 >> re1;
-        stream1 >> im1;
-        stream1 >> re2;
-        stream1 >> im2;
 
         if(operation == 'a' || operation == 'A' )
         {
