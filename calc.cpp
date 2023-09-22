@@ -2,7 +2,6 @@
 #include "complex.h"
 #include "calc.h"
 #include <iostream>
-
 using namespace std;
 
 
@@ -68,6 +67,7 @@ void calcDivide(Complex op1, Complex op2)
     double result_re = ( ( (op1.re * op2.re) + (op1.im*op2.im) ) /
     ( (op2.re * op2.re) + (op2.im * op2.im) ));
 
+   
     double result_im = ( ( (op1.im*op2.re) - (op2.im*op1.re) ) /
     ( (op2.re * op2.re) + (op2.im * op2.im) ));
 

@@ -50,27 +50,13 @@ void compInput(void)
         char input[size];
         fgets(input, size, stdin);
 
+        string input_string = "";
 
-        sscanf(input, "%c %lf %lf %lf %lf", &operation, &re1, &im1, &re2, &im2);
-        
-        //get the first non space/non tab character for operator
-        //since sscanf can't differentiate it
         for(int i = 0; i < size; i++)
         {
-            if(input[i] != ' ' && input[i] != '\t')
-            {
-                operation = input[i];
-                break;
-            }
+            input_string = input_string + input[i];
         }
-
-        
-        cerr << operation << endl;
-        cerr << re1 << endl;
-        cerr << im1 << endl;
-        cerr << re2 << endl;
-        cerr << im2 << endl;
-
+       
 
         if(operation == 'q' || operation == 'Q')
         {
@@ -110,6 +96,13 @@ void compInput(void)
             cerr << endl; 
             continue;
         }
+
+        stringstream stream1(input_string);
+        stream1 >> operation;
+        stream1 >> re1;
+        stream1 >> im1;
+        stream1 >> re2;
+        stream1 >> im2;
 
         if(operation == 'a' || operation == 'A' )
         {

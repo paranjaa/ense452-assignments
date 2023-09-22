@@ -18,36 +18,6 @@ int main(){
     cerr << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cerr << "Type Q to quit" << endl;
     compInput();
-    //cout << "10 + j 12";
     return 0;
    
 }
-
-
-    // string input = "a 1 2 3 1 213221 321";
-    // int result = countWords(input);
-    // cout << "There are " << result;
-    // cout << " words in the test sentence" << endl;
-    // if(result < 5)
-    // {
-    //   cout << "error: too few arguements" << endl;
-    // }
-    // if(result > 5)
-    // {
-    //   cout << "error: too many arguements" << endl;
-    // }
-    // return 0;
-
-    
-
-    // double x1 = 1;
-    // double y1 = 2;
-
-    // double x2 = 3;
-    // double y2 = 4;
-
-    
-    // double x3 = ((x1*x2 + y1*y2) / ((x2*x2) + (y2*y2)));
-    // double y3 = ((y1*x2 - y2*x1) /((x2*x2) + (y2*y2)));
-
-    // cout << "The answer is: " << x3 << " j " << y3 << endl;
