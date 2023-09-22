@@ -77,9 +77,11 @@ void comp_input(void)
                 {
                         input_string = input_string + input[i];
                 }
-
-                if(input_string == "")
+                //in case the input is empty (from just hitting enter)
+                //go through loop again without saying it's an error
+                if(input_string[0] == '\0')
                 {
+                        cerr << "Made it in here";
                         continue;
                 }
 
@@ -100,6 +102,10 @@ void comp_input(void)
         
                 if(count_words(input) < 5)
                 {
+                        if(count_words(input) == 0)
+                        {
+                                continue;
+                        }
                         cout << "error code: 2: missing arguments"; 
                         cerr << endl; 
                         continue;
