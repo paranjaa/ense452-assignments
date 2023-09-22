@@ -14,15 +14,24 @@
 //#include <ctype.h>
 //#include <stdlib.h>
 #include <iostream>
+#include <sstream>
+#include <string>
 
 using namespace std;
 
 
-//based on code from https://stackoverflow.com/questions/24841066/counting-words-in-a-string
-/*
+//Different method for counting, used sstream instead, like this example
+//https://www.geeksforgeeks.org/stringstream-c-applications/
 int countWords(string input)
 {
     int count = 0;
+    string word;
+    stringstream strm(input);
+
+    while(strm >> word)
+        ++count;
+    return count;
+    /*
     char previous = ' ';
     for(int i = 0; i < input.size(); i++)
     {
@@ -31,9 +40,9 @@ int countWords(string input)
             count++;
         }
         previous = input[i];
-    }
+    }*/
     return count;
-}*/
+}
 
 
 void compInput(void)
@@ -45,12 +54,12 @@ void compInput(void)
     double im2;
 
     int size = 40;
-    char input[size];
+
 
     while(1)
     {
         cerr << "Enter exp:";
-        input[0] = '\0';
+        char input[size];
         fgets(input, size, stdin);
 
         sscanf(input, "%c %lf %lf %lf %lf", &operation, &re1, &im1, &re2, &im2);
@@ -66,6 +75,9 @@ void compInput(void)
             cerr << "Closing the calculator" << endl;
             break;
         }
+
+        int a = countWords(input);
+        cerr << "There are " << a << " words in the input" << endl;
 
         /*
         
