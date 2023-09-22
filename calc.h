@@ -1,3 +1,13 @@
+/**
+ * Project: Assignment #1
+ * Course: ENSE 452
+ * Date: Sept 8th, 2023
+ * Programmer: Alok Paranjape
+ * Description: Header file for calc.cpp
+ * has the function signatures for
+ * calculating operations and printing their results  
+*/
+
 #ifndef CALC_H
 #define CALC_H
 
