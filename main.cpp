@@ -14,14 +14,14 @@ using namespace std;
 
 
 int main(){
-    //cout << "Hello World" << endl;
-    //cout << "Complex calculator" << endl;
-    // cout << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
-    // cout << "followed by two complex numbers expressed as pairs of doubles." << endl;
-    // cout << "Type Q to quit" << endl;
-    
-    cout << "10 + j 12";
-    return 0;
+  cerr << "Hello World" << endl;
+  cerr << "Complex calculator" << endl;
+  cerr << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
+  cerr << "followed by two complex numbers expressed as pairs of doubles." << endl;
+  cerr << "Type Q to quit" << endl;
+
+  cout << "10 + j 12";
+  return 0;
    
 }
 
