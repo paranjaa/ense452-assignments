@@ -111,13 +111,39 @@ void compInput(void)
 
         if(operation == 'a' || operation == 'A' )
         {
-            // cout << endl << "Addition" << endl;
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
             calcAdd(comp1, comp2);
-            cout << endl;
+            cerr << endl;
             continue;
         }
+
+        if(operation == 's' || operation == 'S' )
+        {
+            Complex comp1(re1, im1);
+            Complex comp2(re2, im2);
+            calcSubtract(comp1, comp2);
+            cerr << endl;
+            continue;
+        }
+
+        if(operation == 'm' || operation == 'M' )
+        {
+            Complex comp1(re1, im1);
+            Complex comp2(re2, im2);
+            calcMultiply(comp1, comp2);
+            continue;
+        }
+
+        if(operation == 'd' || operation == 'D' )
+        {
+            Complex comp1(re1, im1);
+            Complex comp2(re2, im2);
+            calcDivide(comp1, comp2);
+            continue;
+        }
+        
+
 
         
 
@@ -130,22 +156,7 @@ void compInput(void)
 
         
 
-        if(operation == 'm' || operation == 'M' )
-        {
-            Complex comp1(x1, i1);
-            Complex comp2(x2, i2);
-            calcMultiply(comp1, comp2);
-        }
-
-        if(operation == 'd' || operation == 'D' )
-        {
-            //check for div by zero
-            if(x2 == 0 && i2 == 0)
-            {
-                cout << "error code: 4: divide by zero" << endl;
-            }
-            cout << endl << "Division" << endl;
-        }
+      
         
 
         if(operation == 'q' || operation == 'Q' )
