@@ -3,7 +3,10 @@
   Course: ENSE 452
   Date: Sept 8th, 2023
   Programmer: Alok Paranjape
-  Description: Making a complex-calculator with a command line
+  Description: Main file for the assignment
+  prints out introductory text to stderr
+  then goes into the rest of the code with
+  comp_input()
 */
 
 #include <iostream>
@@ -19,5 +22,4 @@ int main(){
     cerr << "Type Q to quit" << endl;
     comp_input();
     return 0;
-   
 }
