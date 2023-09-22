@@ -37,8 +37,9 @@ void comp_input(void)
     double re2;
     double im2;
 
-    int size = 40;
-
+    //set this as const so it wouldn't be used for
+    //a variably sized array
+    const int size = 40;
 
     while(1)
     {
@@ -68,7 +69,6 @@ void comp_input(void)
             break;
         }
 
-        bool valid_input = true;
 
         
         
@@ -87,6 +87,7 @@ void comp_input(void)
             continue;
         }
 
+        
         if( (re2 == 0 && im2 == 0) && (operation == 'D' || operation == 'd') )
         {
             cout << "error code: 4: divide by zero";
