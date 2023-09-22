@@ -132,6 +132,7 @@ void compInput(void)
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
             calcMultiply(comp1, comp2);
+            cerr << endl;
             continue;
         }
 
@@ -140,6 +141,7 @@ void compInput(void)
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
             calcDivide(comp1, comp2);
+            cerr << endl;
             continue;
         }
         

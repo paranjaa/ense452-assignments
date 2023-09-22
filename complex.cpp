@@ -8,19 +8,19 @@ using namespace std;
 
     Complex::Complex()
     {
-        real = 4.2;
-        imaginary = 2.4;
+        re = 4.2;
+        im = 2.4;
     }
-    Complex::Complex(double newReal, double newImaginary)
+    Complex::Complex(double new_re, double new_im)
     {
-        real = newReal;
-        imaginary = newImaginary;
+        re = new_re;
+        im = new_im;
     }
 
     void Complex::printValues()
     {
-        cout << real << endl;
-        cout << imaginary << endl;
+        cerr << re << endl;
+        cerr << im << endl;
     }
 
 

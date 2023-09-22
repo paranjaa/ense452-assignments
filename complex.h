@@ -9,13 +9,12 @@ using namespace std;
 
 class Complex{
     public:
-    double real;
-    double imaginary;
+    double re;
+    double im;
     Complex();
-    Complex(double newReal, double newImaginary);
+    Complex(double new_re, double new_im);
     void printValues();
-    char getSign(double result_imaginary);
-    //void compAddition(double x_1, double i_1, double x_2, double i_2);
+    char getSign(double result_im);
 };
 
 

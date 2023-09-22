@@ -9,9 +9,9 @@
 using namespace std;
 
 
-char getSign(double result_imaginary)
+char getSign(double result_im)
 {
-    if(result_imaginary < 0)
+    if(result_im < 0)
     {
         return '-';
     }
@@ -22,48 +22,45 @@ char getSign(double result_imaginary)
 
 }
 
-void printResult(double result_real, double result_imaginary, char result_sign)
+void printResult(double result_re, double result_im, char result_sign)
 {
-    cout << result_real;
+    cout << result_re;
     cout << " " << result_sign << " j ";
-    cout << abs(result_imaginary);
+    cout << abs(result_im);
 }
 
 void calcAdd(Complex op1, Complex op2)
 {
-    double result_real = (op1.real + op2.real);
-    double result_imaginary = (op1.imaginary + op2.imaginary);
-    char result_sign = getSign(result_imaginary);
-    printResult(result_real, result_imaginary, result_sign);
+    double result_re = (op1.re + op2.re);
+    double result_im = (op1.im + op2.im);
+    char result_sign = getSign(result_im);
+    printResult(result_re, result_im, result_sign);
 }
 
 void calcSubtract(Complex op1, Complex op2)
 {
-    double result_real = (op1.real - op2.real);
-    double result_imaginary = (op1.imaginary - op2.imaginary);
-    char result_sign = getSign(result_imaginary);
-    printResult(result_real, result_imaginary, result_sign);
+    double result_re = (op1.re - op2.re);
+    double result_im = (op1.im - op2.im);
+    char result_sign = getSign(result_im);
+    printResult(result_re, result_im, result_sign);
 }
 
 void calcMultiply(Complex op1, Complex op2)
 {
 
-    double result_real = (op1.real * op2.real) - 
-    (op1.imaginary * op2.imaginary);
-    double result_imaginary = (op1.real * op2.imaginary)
-     + (op1.imaginary * op2.real);
-    char result_sign = getSign(result_imaginary);
-    printResult(result_real, result_imaginary, result_sign);
+    double result_re = (op1.re * op2.re) - 
+    (op1.im * op2.im);
+    double result_im = (op1.re * op2.im)
+     + (op1.im * op2.re);
+    char result_sign = getSign(result_im);
+    printResult(result_re, result_im, result_sign);
 }
 
 void calcDivide(Complex op1, Complex op2)
 {
-
-    double result_real = ( ( (op1.real * op2.real) + (op1.imaginary*op2.imaginary) ) /
-    ( (op2.real * op2.real) + (op2.imaginary * op2.imaginary) ));
     //new formula
-    //double result_real = 1.1;
-    //double result_imaginary = 2.2;
+    //double result_re = 1.1;
+    //double result_im = 2.2;
     //  double x3 = ((x1*x2 + y1*y2) / ((x2*x2) + (y2*y2)));
     
     
@@ -71,17 +68,16 @@ void calcDivide(Complex op1, Complex op2)
     // double y3 = ((y1*x2 - y2*x1)/
     // ((x2*x2) + (y2*y2))); 
 
+    double result_re = ( ( (op1.re * op2.re) + (op1.im*op2.im) ) /
+    ( (op2.re * op2.re) + (op2.im * op2.im) ));
+
+    double result_im = ( ( (op1.im*op1.re) - (op2.im*op1.re) ) /
+    ( (op2.re * op2.re) + (op2.im * op2.im) ));
 
 
-
-
-    double result_imaginary = ( ( (op1.imaginary*op1.real) - (op2.imaginary*op1.real) ) /
-    ( (op2.real * op2.real) + (op2.imaginary * op2.imaginary) ));
-
-
-    char result_sign = getSign(result_imaginary);
+    char result_sign = getSign(result_im);
     
-    printResult(result_real, result_imaginary, result_sign);
+    printResult(result_re, result_im, result_sign);
 
 }
 
