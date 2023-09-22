@@ -1,9 +1,12 @@
 /**
-  Project: Assignment #1
-  Course: ENSE 452
-  Date: Sept 8th, 2023
-  Programmer: Alok Paranjape
-  Description: 
+*  Project: Assignment #1
+*  Course: ENSE 452
+*  Date: Sept 8th, 2023
+*  Programmer: Alok Paranjape
+*  Description: Handles the input for the complex 
+*  calculator, reading input, counting the words,
+*  checking for errors, and then calling the other functions
+*  for the rest. Probably could have split comp_input up more.
 */
 
 #include "input.h"
@@ -12,18 +15,21 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-
 using namespace std;
 
 
-//Based on code from this example:
-//https://www.geeksforgeeks.org/stringstream-c-applications/
-//Takes the number 
+
 int count_words(string input)
 {
+        //Based on code from this example:
+        //https://www.geeksforgeeks.org/stringstream-c-applications/
+        //Takes the input string and reads through it like cin
+     
         stringstream strm(input);
         int count = 0;
         string word;
+        //specifically for dealing with potential extra spaces
+        //compared to just looping through and looking for ' '
         while(strm >> word)
         {
                 ++count;
@@ -31,10 +37,11 @@ int count_words(string input)
         return count;
 }
 
-//based on code from this example
-//https://stackoverflow.com/questions/4010240/comparing-doubles
+
 bool compare_double_0(double a)
-{
+{       
+        //based on code from this example
+        //https://stackoverflow.com/questions/4010240/comparing-doubles
         //could probably increase the precision here to
         //berrer check for zero
         if ( std::abs(a - 0) < 0.0000001 )
@@ -102,6 +109,8 @@ void comp_input(void)
         
                 if(count_words(input) < 5)
                 {
+                        //if it's just from hitting enter,
+                        //don't announce the error
                         if(count_words(input) == 0)
                         {
                                 continue;
