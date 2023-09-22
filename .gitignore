@@ -3,3 +3,4 @@ calculatorOutput.exe
 
 runtests.py
 .vscode/settings.json
+.vscode/tasks.json
