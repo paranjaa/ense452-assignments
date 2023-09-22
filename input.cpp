@@ -24,23 +24,11 @@ using namespace std;
 //https://www.geeksforgeeks.org/stringstream-c-applications/
 int countWords(string input)
 {
+    stringstream strm(input);
     int count = 0;
     string word;
-    stringstream strm(input);
-
     while(strm >> word)
         ++count;
-    return count;
-    /*
-    char previous = ' ';
-    for(int i = 0; i < input.size(); i++)
-    {
-        if(input[i] != ' ' && previous == ' ')
-        {
-            count++;
-        }
-        previous = input[i];
-    }*/
     return count;
 }
 
@@ -62,22 +50,64 @@ void compInput(void)
         char input[size];
         fgets(input, size, stdin);
 
-        sscanf(input, "%c %lf %lf %lf %lf", &operation, &re1, &im1, &re2, &im2);
 
-        //cerr << operation << endl;
-        //cerr << re1 << endl;
-        //cerr << im1 << endl;
-        //cerr << re2 << endl;
-        //cerr << im2 << endl;
+        sscanf(input, "%c %lf %lf %lf %lf", &operation, &re1, &im1, &re2, &im2);
+        
+        //get the first non space/non tab character for operator
+        //since sscanf can't differentiate it
+        for(int i = 0; i < size; i++)
+        {
+            if(input[i] != ' ' && input[i] != '\t')
+            {
+                operation = input[i];
+                break;
+            }
+        }
+        cerr << operation << endl;
+        cerr << re1 << endl;
+        cerr << im1 << endl;
+        cerr << re2 << endl;
+        cerr << im2 << endl;
+
 
         if(operation == 'q' || operation == 'Q')
         {
-            cerr << "Closing the calculator" << endl;
+            cerr << "Closing the calculator";
             break;
         }
+        
+        
+        if(countWords(input) < 5)
+        {
+            cout << "error code: 2: missing arguments"; // <<endl 
+            continue;
+        }
 
-        int a = countWords(input);
-        cerr << "There are " << a << " words in the input" << endl;
+        if(countWords(input) > 5)
+        {
+            cout << "error code: 3: extra arguments";  // <<endl 
+            continue;
+        }
+
+        if( (re2 == 0 && im2 == 0) && (operation == 'D' || operation == 'd') )
+        {
+            cout << "error code: 4: divide by zero";
+            continue;
+        }
+
+        if(operation != 'a' && operation != 's' && operation != 'm' && 
+        operation != 'd'  && operation != 'q' && operation != 'A' &&
+         operation != 'S' && operation != 'M' && operation != 'D' &&
+        operation != 'Q')
+        {
+            cout << "error code: 1: illegal command";// << endl; 
+            continue;
+        }
+
+
+
+        //int a = countWords(input);
+        //cerr << "There are " << a << " words in the input" << endl;
 
         /*
         
