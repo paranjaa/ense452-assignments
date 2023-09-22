@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-int countWords(string input);
-void compInput(void);
+int count_words(string input);
+void comp_input(void);
 
 #endif

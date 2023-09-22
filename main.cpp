@@ -17,7 +17,7 @@ int main(){
     cerr << "Type a letter to specify the arithmetic operator (A, S, M, D)" << endl;
     cerr << "followed by two complex numbers expressed as pairs of doubles." << endl;
     cerr << "Type Q to quit" << endl;
-    compInput();
+    comp_input();
     return 0;
    
 }

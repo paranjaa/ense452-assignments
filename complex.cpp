@@ -14,7 +14,7 @@ using namespace std;
         im = new_im;
     }
 
-    void Complex::printValues()
+    void Complex::print_values()
     {
         cerr << re << endl;
         cerr << im << endl;

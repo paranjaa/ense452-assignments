@@ -18,7 +18,7 @@ using namespace std;
 
 //Different method for counting, used sstream instead, like this example
 //https://www.geeksforgeeks.org/stringstream-c-applications/
-int countWords(string input)
+int count_words(string input)
 {
     stringstream strm(input);
     int count = 0;
@@ -29,7 +29,7 @@ int countWords(string input)
 }
 
 
-void compInput(void)
+void comp_input(void)
 {
     char operation;
     double re1;
@@ -60,22 +60,27 @@ void compInput(void)
         stream1 >> re2;
         stream1 >> im2;
        
+    
 
         if(operation == 'q' || operation == 'Q')
         {
             cerr << "Closing the calculator";
             break;
         }
+
+        bool valid_input = true;
+
         
         
-        if(countWords(input) < 5)
+        
+        if(count_words(input) < 5)
         {
             cout << "error code: 2: missing arguments"; 
             cerr << endl; 
             continue;
         }
 
-        if(countWords(input) > 5)
+        if(count_words(input) > 5)
         {
             cout << "error code: 3: extra arguments";  
             cerr << endl; 
@@ -104,7 +109,7 @@ void compInput(void)
         {
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
-            calcAdd(comp1, comp2);
+            calc_add(comp1, comp2);
             cerr << endl;
             continue;
         }
@@ -113,7 +118,7 @@ void compInput(void)
         {
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
-            calcSubtract(comp1, comp2);
+            calc_subtract(comp1, comp2);
             cerr << endl;
             continue;
         }
@@ -122,7 +127,7 @@ void compInput(void)
         {
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
-            calcMultiply(comp1, comp2);
+            calc_multiply(comp1, comp2);
             cerr << endl;
             continue;
         }
@@ -131,7 +136,7 @@ void compInput(void)
         {
             Complex comp1(re1, im1);
             Complex comp2(re2, im2);
-            calcDivide(comp1, comp2);
+            calc_divide(comp1, comp2);
             cerr << endl;
             continue;
         }

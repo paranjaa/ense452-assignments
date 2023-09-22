@@ -7,8 +7,8 @@ class Complex{
     double im;
     Complex();
     Complex(double new_re, double new_im);
-    void printValues();
-    char getSign(double result_im);
+    void print_values();
+    char get_sign(double result_im);
 };
 
 
