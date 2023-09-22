@@ -2,3 +2,4 @@ output.exe
 calculatorOutput.exe
 
 runtests.py
+.vscode/settings.json

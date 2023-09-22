@@ -38,6 +38,7 @@ int count_words(string input)
 }
 
 
+
 bool compare_double_0(double a)
 {       
         //based on code from this example
@@ -52,6 +53,51 @@ bool compare_double_0(double a)
         {
                 return false;
         }
+}
+
+bool count_arguments(string input)
+{
+        int argument_count = count_words(input);
+        if(argument_count == 5)
+        {
+                return true;
+        }
+        if(argument_count < 5)
+        {
+                //if it's just from hitting enter,
+                //don't announce the error
+                if(argument_count == 0)
+                {
+                        return false;
+                }
+                cout << "error code: 2: missing arguments"; 
+                cerr << endl; 
+                return false;
+        }
+
+        if(argument_count > 5)
+        {
+                cout << "error code: 3: extra arguments";  
+                cerr << endl; 
+                return false;
+        }
+        return false;
+}
+
+bool check_div0(double value_1, double value_2, char operation)
+{
+        if( ( compare_double_0(value_1) &&  compare_double_0(value_2)) 
+        && (operation == 'D' || operation == 'd') )
+        {
+                cout << "error code: 4: divide by zero";
+                cerr << endl;
+                return false;
+        }
+        else
+        {
+                return true;
+        }
+
 }
 
 
@@ -100,40 +146,26 @@ void comp_input(void)
                 stream1 >> im2;
        
     
+        
 
                 if(operation == 'q' || operation == 'Q')
                 {
                         cerr << "Closing the calculator";
                         break;
                 }
+                
+                if(count_arguments(input) == false)
+                {
+                        continue;
+                }
+
+                if(check_div0(re2, im2, operation) == false)
+                {
+                        continue;
+                }
         
-                if(count_words(input) < 5)
-                {
-                        //if it's just from hitting enter,
-                        //don't announce the error
-                        if(count_words(input) == 0)
-                        {
-                                continue;
-                        }
-                        cout << "error code: 2: missing arguments"; 
-                        cerr << endl; 
-                        continue;
-                }
 
-                if(count_words(input) > 5)
-                {
-                        cout << "error code: 3: extra arguments";  
-                        cerr << endl; 
-                        continue;
-                }
 
-                if( ( compare_double_0(re2) &&  compare_double_0(im2)) 
-                && (operation == 'D' || operation == 'd') )
-                {
-                        cout << "error code: 4: divide by zero";
-                        cerr << endl;
-                        continue;
-                }
 
         
                 if(operation != 'a' && operation != 's' && operation != 'm' && 

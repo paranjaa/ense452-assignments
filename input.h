@@ -38,4 +38,17 @@ bool compare_double_0(double a);
  */ 
 void comp_input(void);
 
+/**
+ * Handles the printout (and condition) for counting the arguments.
+ * Using count_words as a helper, instead of it all happening in comp_input
+ */ 
+
+bool count_arguments(string input);
+
+/**
+ * Checks if the and operator numbers it read through 
+ * cause a div by zero error, using compare_double_0 as a helper
+ */ 
+bool check_div0(double value_1, double value_2, char operation);
+
 #endif
