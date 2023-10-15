@@ -61,6 +61,9 @@ public:
     /** Insert a new element at the tail of the queue. */
     void insert(Data d);
 
+    /**Insert an element at a given position, added as part of assignment 2*/
+    void insert(Data d, unsigned position);
+
     /**
        Remove the head element of the queue.
 
