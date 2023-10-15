@@ -1,4 +1,5 @@
 README:
+(copied the AS1 files into a folder, not sure how to remove the ones still in main)
 I've been using these for building and compiling. 
 Tried to use a makefile, but can't seem to get make to install properly
 g++ main.cpp input.cpp complex.cpp calc.cpp -o calculatorOutput
