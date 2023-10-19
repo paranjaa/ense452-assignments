@@ -5,6 +5,16 @@
    Description: test code
 */
 
+/**
+ * Project: ENSE 452 Assignment #2
+ * Course: ENSE 452/ENEL 452 
+ * Programmer: Alok Paranjape (modified from above)
+ * Date: Oct 18th, 2023
+ * Description: Testing the new insert function, if it handles each condition
+ * Wasn't able to reliably remember assert statements from 375,
+ * Did the tests with printing instead 
+*/
+
 #include <iostream>
 #include <cassert>
 #include <cstdlib>
@@ -76,6 +86,20 @@ int main()
     found = q1.search(temp3);
     assert(found == false);
 
+    cout << endl << "Testing: inserting to out of bounds positions" << endl;
+    cout << "Should print some errors, and also not change" << endl;
+
+    Queue q_error;
+
+    q_error.insert(Data(15,15));
+    q_error.insert(Data(16,16));
+    q_error.insert(Data(17,17));
+    q_error.print();
+    q_error.insert(Data(-1,-1),-1);
+    q_error.insert(Data(4,4),4);
+    cout << endl;
+    q_error.print();
+
 
     cout << endl << "Testing: the insert position function" << endl;
     Queue q_insert_position;
@@ -134,19 +158,7 @@ int main()
     q_tail_before.print();
 
 
-    cout << endl << "Testing: inserting to out of bounds positions" << endl;
-    cout << "Should print some errors, and also not change" << endl;
 
-    Queue q_error;
-
-    q_error.insert(Data(15,15));
-    q_error.insert(Data(16,16));
-    q_error.insert(Data(17,17));
-    q_error.print();
-    q_error.insert(Data(-1,-1),-1);
-    q_error.insert(Data(4,4),4);
-    cout << endl;
-    q_error.print();
    
 
 }

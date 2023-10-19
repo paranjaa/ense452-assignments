@@ -4,6 +4,15 @@
    Course: enel452
 */
 
+/**
+ * Project: ENSE 452 Assignment #2
+ * Course: ENSE 452/ENEL 452 
+ * Programmer: Alok Paranjape (modified from above)
+ * Date: Oct 18th, 2023
+ * Description: Adding a function to the implemented queue structure
+ * that allows inserting elements at positions other than the tail
+*/
+
 #include "queue.h"
 #include <iostream>
 #include <cstdlib>              // for exit
@@ -61,6 +70,15 @@ void Queue::insert(Data d)
     nelements++;
 }
 
+/**
+ * Inserts a set of data at a given position in the queue
+ * Rather than just at the end. Includes specific conditions for:
+ *  - out of bounds positions 
+ *  - inserting at the head
+ *  - inserting at the tail (i,e just calling)
+ *  - inserting at in front of the tail
+*/
+
 void Queue::insert(Data d, unsigned position)
 {
     //before inserting, check if the position is in bounds
@@ -70,51 +88,60 @@ void Queue::insert(Data d, unsigned position)
         return;
     }
 
+    //if it's valid, then make a new element to add to the queue
 
     QElement* new_element = new QElement(d);
 
-    //adding in the three conditions specified in the assignment
     //if the position is zero
     if(position == 0)
     {
-        //make the new node point to the head, then set it as the head
-
+        //make the new node point to the head
         new_element->next = head;
+        //then replace it as the head
         head = new_element;
+        //update the number of nodes, then exit
         nelements++;
         return;
     }
 
-    //if the position is the size
+    //if the position is the size, it's adding to the tail like a regular queue
     if(position == size())
     {
-        //then call the regular insert function for it,
-        // it'll take care of the rest
+        //so call the regular insert function for it,
         insert(d);
         return;
     }
 
+    //if it's one less than the size
     if(position == size() - 1)
     {
-        //cout << "Here" << endl;
+        //point at the head and iterate to before 
+        //where the new node is supposed to go
         QElement* temp_element = head;
         for(int i = 0; i < size() - 2; i++)
         {
             temp_element = temp_element->next;
         }
+        //set the temporary pointer at the new node
         temp_element->next = new_element;
+        //then point the new node at the tail so it doesn't break the queue
         new_element->next = tail;
         nelements++;
         return;
     }
 
+    //if it isn't any of those positions
+    //make a pointer to the head
     QElement* prev_pointer = head;
 
+    //and iterate it to right before where the new node is supposed to go
     for(int i = 0; i < (position-1); i++)
     {
         prev_pointer = prev_pointer->next;
     }
+    //point the new node at where the temporary pointer was
     new_element->next = prev_pointer->next;
+    //then point the previous node at the new one to complete the insertion 
     prev_pointer->next = new_element;
     nelements++;
     return;
