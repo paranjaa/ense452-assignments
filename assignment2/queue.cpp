@@ -66,53 +66,62 @@ void Queue::insert(Data d, unsigned position)
     // cout << "Hello World, inserting an element at a position" << endl;
     QElement* new_element = new QElement(d);
 
-    //adding in the three conditions specified in the assignment
+    // //adding in the three conditions specified in the assignment
+    // //if the position is zero
+    // if(position == 0)
+    // {
+    //     //make the new node point to the head, then set it as the head
 
-    //if the position is zero
-    if(position == 0)
-    {
-        //make the new node point to the head, then set it as the head
+    //     new_element->next = head;
+    //     head = new_element;
+    //     nelements++;
+    //     return;
+    // }
+    // //if the position is the size
+    // if(position == size())
+    // {
+    //     //then call the regular insert function for it,
+    //     // it'll take care of the rest
+    //     insert(d);
+    //     return;
+    // }
 
-        new_element->next = head;
-        head = new_element;
-        nelements++;
-        return;
-    }
-    //if the position is the size
-    if(position == size())
-    {
-        //then call the regular insert function for it,
-        // it'll take care of the rest
-        insert(d);
-        return;
-    }
+    // if(position == size() - 1)
+    // {
+    //     //cout << "Here" << endl;
+    //     QElement* temp_element = head;
+    //     for(int i = 0; i < size() - 2; i++)
+    //     {
+    //         temp_element = temp_element->next;
+    //     }
+    //     //cout << temp_element->data.x << ":" << temp_element->data.y << endl;
 
-    if(position == size() - 1)
-    {
-        //cout << "Here" << endl;
-        QElement* temp_element = head;
-        for(int i = 0; i < size() - 2; i++)
-        {
-            temp_element = temp_element->next;
-        }
-        //cout << temp_element->data.x << ":" << temp_element->data.y << endl;
+    //     temp_element->next = new_element;
+    //     new_element->next = tail;
+    //     nelements++;
+    //     return;
+    // }
 
-        temp_element->next = new_element;
-        new_element->next = tail;
-        nelements++;
-        return;
-    }
-
-
-
-        //if the given position is after the tail's next space, then end it there
+    
+    //if the given position is after the tail's next space, then end it there
     // if(position > (size() + 1))
     // {
     //     cout << "Error" << endl;
     //     return;
     // }
 
-    // QElement* prev_element = head;
+    //if not any of those conditions, work on inserting at that position
+    
+    QElement* prev_pointer = head;
+
+    for(int i = 0; i < (position-1); i++)
+    {
+        prev_pointer = prev_pointer->next;
+    }
+    new_element->next = prev_pointer->next;
+    prev_pointer->next = new_element;
+    nelements++;
+
     // unsigned position_copy = position;
     // while(--position_copy > 1)
     // {
