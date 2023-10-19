@@ -77,51 +77,76 @@ int main()
     assert(found == false);
 
 
-    cout << "Testing the insert position function" << endl;
+    cout << endl << "Testing: the insert position function" << endl;
     Queue q_insert_position;
     q_insert_position.insert(Data(1,1));
     q_insert_position.insert(Data(3,3));
     q_insert_position.insert(Data(5,5));
     q_insert_position.insert(Data(6,6));
 
-    cout << "Intitial queue" << endl;
     q_insert_position.print();
 
-    cout << "Adding a node after the head, in position 1" << endl;
+    cout << endl << "Adding a node after the head, in position 1" << endl;
     q_insert_position.insert(Data(2,2), 1);
     
     q_insert_position.print();
     
-    cout << "Adding a node after that node, should be in order now" << endl;
+    cout << endl << "Adding a node after that node, should be in order now" << endl;
     q_insert_position.insert(Data(4,4), 3);
     
     q_insert_position.print();
 
-    cout << "Testing adding a node to the head " << endl;
+    cout << endl << "Testing: adding a node to the head " << endl ;
     Queue q_head;
 
     q_head.insert(Data(11,11));
     q_head.insert(Data(12,12));
     q_head.insert(Data(13,13));
-    cout << "Initial queue:" << endl;
     q_head.print();
     q_head.insert(Data(10,10),0);
-    cout << "Should put a new value at the head" << endl;
+    cout << endl;
     q_head.print();
 
     
-    cout << "Testing adding a node to the head " << endl;
+    cout << endl << "Testing: replacing the tail (inserting at (size)" << endl;
+
+    Queue q_tail;
+
+    q_tail.insert(Data(7,7));
+    q_tail.insert(Data(8,8));
+    q_tail.insert(Data(9,9));
+    q_tail.print();
+    q_tail.insert(Data(10,10),3);
+    cout << endl;
+    q_tail.print();
 
 
+    cout << endl << "Testing: adding a value in front of the tail" << endl;
+
+    Queue q_tail_before;
+
+    q_tail_before.insert(Data(18,18));
+    q_tail_before.insert(Data(19,19));
+    q_tail_before.insert(Data(21,21));
+    q_tail_before.print();
+    q_tail_before.insert(Data(20,20),2);
+    cout << endl;
+    q_tail_before.print();
 
 
-    // Queue q;
-    // q.insert(Data(1,2));
-    // q.insert(Data(3,4));
-    // q.insert(Data(5,6));
-    // q.insert(Data(-2,-3), 1);
-    // // q.insert(Data(-4,-5), 3);
-    // q.print();
-    // should produce 0:(1,2) 1:(-2,-3) 2:(3,4) 3:(-4,-5) 4:(5,6)
+    cout << endl << "Testing: inserting to out of bounds positions" << endl;
+    cout << "Should print some errors, and also not change" << endl;
+
+    Queue q_error;
+
+    q_error.insert(Data(15,15));
+    q_error.insert(Data(16,16));
+    q_error.insert(Data(17,17));
+    q_error.print();
+    q_error.insert(Data(-1,-1),-1);
+    q_error.insert(Data(4,4),4);
+    cout << endl;
+    q_error.print();
+   
 
 }
