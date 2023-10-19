@@ -76,22 +76,44 @@ int main()
     found = q1.search(temp3);
     assert(found == false);
 
-    // Queue q_insert_position;
-    // q_insert_position.insert(Data(1,1));
-    // q_insert_position.insert(Data(3,3));
-    // q_insert_position.insert(Data(5,5));
-    // q_insert_position.insert(Data(6,6));
 
-    // q_insert_position.print();
+    cout << "Testing the insert position function" << endl;
+    Queue q_insert_position;
+    q_insert_position.insert(Data(1,1));
+    q_insert_position.insert(Data(3,3));
+    q_insert_position.insert(Data(5,5));
+    q_insert_position.insert(Data(6,6));
 
-    // //
-    // q_insert_position.insert(Data(2,2), 1);
+    cout << "Intitial queue" << endl;
+    q_insert_position.print();
+
+    cout << "Adding a node after the head, in position 1" << endl;
+    q_insert_position.insert(Data(2,2), 1);
     
-    // q_insert_position.print();
+    q_insert_position.print();
     
-    // q_insert_position.insert(Data(4,4), 3);
+    cout << "Adding a node after that node, should be in order now" << endl;
+    q_insert_position.insert(Data(4,4), 3);
     
-    // q_insert_position.print();
+    q_insert_position.print();
+
+    cout << "Testing adding a node to the head " << endl;
+    Queue q_head;
+
+    q_head.insert(Data(11,11));
+    q_head.insert(Data(12,12));
+    q_head.insert(Data(13,13));
+    cout << "Initial queue:" << endl;
+    q_head.print();
+    q_head.insert(Data(10,10),0);
+    cout << "Should put a new value at the head" << endl;
+    q_head.print();
+
+    
+    cout << "Testing adding a node to the head " << endl;
+
+
+
 
     // Queue q;
     // q.insert(Data(1,2));

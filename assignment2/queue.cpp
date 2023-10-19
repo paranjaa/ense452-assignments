@@ -68,15 +68,15 @@ void Queue::insert(Data d, unsigned position)
 
     // //adding in the three conditions specified in the assignment
     // //if the position is zero
-    // if(position == 0)
-    // {
-    //     //make the new node point to the head, then set it as the head
+    if(position == 0)
+    {
+        //make the new node point to the head, then set it as the head
 
-    //     new_element->next = head;
-    //     head = new_element;
-    //     nelements++;
-    //     return;
-    // }
+        new_element->next = head;
+        head = new_element;
+        nelements++;
+        return;
+    }
     // //if the position is the size
     // if(position == size())
     // {
