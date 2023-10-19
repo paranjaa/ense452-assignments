@@ -118,7 +118,7 @@ void Queue::insert(Data d, unsigned position)
         //point at the head and iterate to before 
         //where the new node is supposed to go
         QElement* temp_element = head;
-        for(int i = 0; i < size() - 2; i++)
+        for(unsigned i = 0; i < size() - 2; i++)
         {
             temp_element = temp_element->next;
         }
@@ -135,7 +135,7 @@ void Queue::insert(Data d, unsigned position)
     QElement* prev_pointer = head;
 
     //and iterate it to right before where the new node is supposed to go
-    for(int i = 0; i < (position-1); i++)
+    for(unsigned i = 0; i < (position-1); i++)
     {
         prev_pointer = prev_pointer->next;
     }
