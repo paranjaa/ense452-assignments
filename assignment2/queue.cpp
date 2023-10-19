@@ -66,33 +66,55 @@ void Queue::insert(Data d, unsigned position)
     // cout << "Hello World, inserting an element at a position" << endl;
     QElement* new_element = new QElement(d);
 
-    //if the given position is after the tail's next space, then end it there
+    //adding in the three conditions specified in the assignment
+
+    //if the position is zero
+    if(position == 0)
+    {
+        //make the new node point to the head, then set it as the head
+
+        new_element->next = head;
+        head = new_element;
+        nelements++;
+        return;
+    }
+    //if the position is the size
+    if(position == size())
+    {
+        //then call the regular insert function for it,
+        // it'll take care of the rest
+        insert(d);
+        return;
+    }
+
+    if(position == size() - 1)
+    {
+        tail->next = new_element;
+        tail = new_element;
+        nelements++;
+        return;
+    }
+
+
+
+        //if the given position is after the tail's next space, then end it there
     // if(position > (size() + 1))
     // {
     //     cout << "Error" << endl;
     //     return;
     // }
 
-    if(position == 1)
-    {
-        cout << "adding a new element at the head position" << endl;
-        new_element->next = head;
-        head = new_element;
-        nelements++;
-        return;
-    }
-
-    QElement* prev_element = head;
-    unsigned position_copy = position;
-    while(--position_copy > 1)
-    {
-        prev_element = prev_element ->next;
-    }
-    cout << "the position minus 1th element is" << endl;
-    cout << "(" << prev_element->data.x << "," << prev_element->data.y << ") " << endl;
-    new_element->next = prev_element->next;
-    prev_element->next = new_element;
-    nelements++;
+    // QElement* prev_element = head;
+    // unsigned position_copy = position;
+    // while(--position_copy > 1)
+    // {
+    //     prev_element = prev_element ->next;
+    // }
+    // cout << "the position minus 1th element is" << endl;
+    // cout << "(" << prev_element->data.x << "," << prev_element->data.y << ") " << endl;
+    // new_element->next = prev_element->next;
+    // prev_element->next = new_element;
+    // nelements++;
 
 
 

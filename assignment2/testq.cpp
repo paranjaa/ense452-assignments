@@ -38,21 +38,37 @@ int main()
     using namespace std;
 
     cout << "Testing queue.\n";
-    Queue q1;
+    Queue q3;
 
-    q1.insert(Data(1,1));
-    q1.insert(Data(3,3));
-    q1.insert(Data(5,5));
+    q3.insert(Data(1,1));
+    q3.insert(Data(3,3));
+    q3.insert(Data(5,5));
 
-    q1.print();
+    //testing adding to the head
+    q3.print();
 
-    q1.insert(Data(2,2), 1);
+    cout << "Inserting a node in the 0 position" << endl;
+    q3.insert(Data(0,0), 0);
 
-    q1.print();
+    //should put the (0,0) node where 1,1 used to be
+    q3.print();
 
-    q1.insert(Data(3,3), 2);
+    cout << "Inserting a node after the tail" << endl;
+    q3.insert(Data(7,7),3);
+    q3.print();
+    
 
-    q1.print();
+    cout << "Replacing the tail" << endl;
+    q3.insert(Data(9,9),4);
+    q3.print();
+
+    // q1.insert(Data(2,2), 1);
+
+    // q1.print();
+
+    // q1.insert(Data(3,3), 2);
+
+    // q1.print();
 
     // vector<Data> dataVec;
     // dataVec.push_back(Data(1,1));
