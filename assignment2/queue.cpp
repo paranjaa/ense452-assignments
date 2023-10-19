@@ -89,8 +89,16 @@ void Queue::insert(Data d, unsigned position)
 
     if(position == size() - 1)
     {
-        tail->next = new_element;
-        tail = new_element;
+        //cout << "Here" << endl;
+        QElement* temp_element = head;
+        for(int i = 0; i < size() - 2; i++)
+        {
+            temp_element = temp_element->next;
+        }
+        //cout << temp_element->data.x << ":" << temp_element->data.y << endl;
+
+        temp_element->next = new_element;
+        new_element->next = tail;
         nelements++;
         return;
     }

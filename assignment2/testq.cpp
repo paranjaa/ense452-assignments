@@ -53,14 +53,14 @@ int main()
     //should put the (0,0) node where 1,1 used to be
     q3.print();
 
-    cout << "Inserting a node after the tail" << endl;
+    cout << "Inserting a node in front of the tail" << endl;
     q3.insert(Data(7,7),3);
     q3.print();
     
 
-    cout << "Replacing the tail" << endl;
-    q3.insert(Data(9,9),4);
-    q3.print();
+    // cout << "Replacing the tail" << endl;
+    // q3.insert(Data(9,9),4);
+    // q3.print();
 
     // q1.insert(Data(2,2), 1);
 
