@@ -87,7 +87,7 @@ int main()
     assert(found == false);
 
     cout << endl << "Testing: inserting to out of bounds positions" << endl;
-    cout << "Should print some errors, and also not change" << endl;
+    cout << "Should print an error, and also not change" << endl;
 
     Queue q_error;
 
@@ -95,7 +95,6 @@ int main()
     q_error.insert(Data(16,16));
     q_error.insert(Data(17,17));
     q_error.print();
-    q_error.insert(Data(-1,-1),-1);
     q_error.insert(Data(4,4),4);
     cout << endl;
     q_error.print();

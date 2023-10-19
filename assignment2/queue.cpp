@@ -82,7 +82,7 @@ void Queue::insert(Data d)
 void Queue::insert(Data d, unsigned position)
 {
     //before inserting, check if the position is in bounds
-    if(position < 0 || position > size())
+    if(position > size())
     {
         cerr << "insert: range error" << endl;
         return;
