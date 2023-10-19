@@ -4,7 +4,17 @@
    Programmer: Karim Naqvi
 
    Description: Implements a queue based on a singly-linked list.
-   Element data is assumed to be a value type, and must support the equals method.
+   Element data is assumed to be a value type, and must support the
+   equals method.
+*/
+
+/**
+ * Project: ENSE 452 Assignment #2
+ * Course: ENSE 452/ENEL 452 
+ * Programmer: Alok Paranjape (modified from above)
+ * Date: Oct 18th, 2023
+ * Description: Didn't make many changes to this one, 
+ * just added a signature for the new function
 */
 
 #ifndef QUEUE_H
@@ -92,3 +102,4 @@ public:
 };
         
 #endif // QUEUE_H
+

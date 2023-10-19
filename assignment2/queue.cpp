@@ -178,3 +178,4 @@ unsigned Queue::size() const
 {
     return nelements;
 }
+

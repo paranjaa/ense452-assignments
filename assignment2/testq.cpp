@@ -156,8 +156,4 @@ int main()
     cout << endl;
     q_tail_before.print();
 
-
-
-   
-
 }
