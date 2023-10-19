@@ -63,7 +63,7 @@ void Queue::insert(Data d)
 
 void Queue::insert(Data d, unsigned position)
 {
-    cout << "Hello World, inserting an element at a position" << endl;
+    // cout << "Hello World, inserting an element at a position" << endl;
     QElement* new_element = new QElement(d);
 
     //if the given position is after the tail's next space, then end it there
